@@ -8,4 +8,4 @@ This web have input validations and record data in a js object. The white card c
 This web site is already deployed on Netflify. You can see this web site working in this [link](https://modest-banach-ca3672.netlify.app/)
 
 ## About me
-Follow mme and my work in [Twitter](https://twitter.com/BuilesYeison) and [LinkedIn](https://www.linkedin.com/in/builesyeison/)
+Follow me and my work in [Twitter](https://twitter.com/BuilesYeison) and [LinkedIn](https://www.linkedin.com/in/builesyeison/)
