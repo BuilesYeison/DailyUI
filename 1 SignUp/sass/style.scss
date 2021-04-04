@@ -1,0 +1,177 @@
+@import "reset";
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+main {
+    min-height: 100vh;
+    background-color: $primaryColor;
+
+    .bxs-cookie {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        color: $secondaryColor;
+        font-size: 40px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px 10px;
+        padding-top: 80px;
+        column-gap: 1em;
+
+        .info-content {
+            display: grid;
+
+            h1 {
+                text-align: center;
+                @extend %title;
+                color: $secondaryColor;
+                width: 80%;
+                justify-self: center;
+                align-self: start;
+            }
+
+            img {
+                justify-self: center;
+                align-self: center;
+                width: 90%;
+            }
+        }
+
+        .email-card {
+            @include card(6);
+            @include form-group(0.8rem);
+            h1 {
+                @extend %title;
+            }
+            
+            .checkbox-group{
+                width: 80%;
+                margin:0 auto;
+                align-self: start;
+                label{
+                    line-height: 1.2;
+                    font-size: 14px;
+                    color: $primaryColor;
+                }
+            }
+            .create-with-google{
+                width: 80%;
+                margin: 0 auto; 
+                text-align: center;
+                align-self: start;             
+                h2{
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                .cta{            
+                    @include cta($googleButtonColor,$googleButtonColorHover,$googleButtonColorActive,5px,40px,$secondaryColor,24px,center);          
+                }
+            }
+            .next-button{
+                @include cta($nextButtonColor,$nextButtonColorHover,$nextButtonColorActive,20px,20px,$secondaryColor,36px,start)
+            }
+            .have-an-account{
+                @extend %option-card;
+                align-self: center;
+            }
+            .have-an-account:hover{
+                color: $primaryColor;
+            }
+        }
+        .date-card{
+            @include card(4);
+            @include form-group(1.2rem);
+            display: none;
+            h1{
+                @extend %title;                
+            }
+            .next-button{
+                @include cta($nextButtonColor,$nextButtonColorHover,$nextButtonColorActive,20px,20px,$secondaryColor,36px,end)
+            }
+            .cancel{@extend %option-card;
+                align-self: center;}
+            .cancel:hover{
+                color: $primaryColor;
+            }
+        }
+        .final-card{
+            @include card(6);
+            @include form-group(1rem);
+            display: none;
+            h1{
+                @extend %title;                
+            }
+            .next-button{  
+                @include cta($nextButtonColor,$nextButtonColorHover,$nextButtonColorActive,20px,20px,$secondaryColor,36px,end)
+            }
+            .cancel{@extend %option-card;
+                align-self: center;}
+            .cancel:hover{
+                color: $primaryColor;
+            }
+        }
+        .verify-email-card{
+            @include card(1);
+            display: none;
+            h1{
+                @extend %title;                
+                line-height: 1.5;
+            }
+        }
+        .disabled-next-button{
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .animated-card{
+            animation-name: opacity;
+            animation-duration: 1s;
+        }
+        @keyframes opacity{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+    }
+}
+
+@media screen and (max-width:780px) {
+    main{
+        .bxs-cookie {
+            position: absolute;
+            top: 110px;
+            left: 35px;
+            color: $primaryColor;
+            font-size: 24px;
+        }
+    }
+    main .grid{
+        padding-top: 30px;
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+        .info-content{
+            img{display: none;}
+            h1{
+                font-size: 24px;
+                width: 100%;
+            }
+        }
+        .card{
+            width: 95vw;
+        }
+        .email-card .checkbox-group label{
+            font-size: 12px;
+        }
+    }
+}

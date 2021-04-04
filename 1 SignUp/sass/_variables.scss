@@ -1,0 +1,90 @@
+$primaryColor:#222831;
+$secondaryColor:#f9f9f9;
+$inputColor:#eaeaea;
+$googleButtonColor:#1da1f2;
+$googleButtonColorHover:#1b84c5;
+$googleButtonColorActive:#10547e;
+$arrowNextColor:#cacaca;
+$nextButtonColor:#f05454;
+$nextButtonColorHover:#cc4646;
+$nextButtonColorActive:#9e3434;
+
+%title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $primaryColor;
+    text-align: center;
+    width: 80%;
+}
+
+%option-card {
+    margin: 0 auto;
+    text-decoration: none;
+    color: #9b9b9b;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+@mixin cta($mainColor, $hoverColor, $activeColor, $pdTd, $pdRl, $iColor, $fSize,$align) {
+    background-color: $mainColor;
+    transition: background-color 0.2s;
+    border-radius: 12px;
+    padding: $pdTd $pdRl;
+    color: $iColor;
+    font-size: $fSize;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    align-self: $align;
+
+    &:hover {
+        background-color: $hoverColor;
+    }
+
+    &:active {
+        background-color: $activeColor;
+    }
+}
+
+@mixin card($rows) {
+    background-color: $secondaryColor;
+    height: 80vh;
+    width: 35vw;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat($rows, 1fr);
+    grid-auto-rows: min-content;
+    justify-items: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+@mixin form-group($inputfSize) {
+    .form-group {
+        position: relative;
+        width: 80%;
+        margin: auto;
+
+        .form-label {
+            position: absolute;
+            top: -24px;
+            font-weight: 500;
+            font-size: 1.4rem;
+            left: 2px;
+            color: $primaryColor;
+        }
+
+        input {
+            width: 100%;
+            outline: 0;
+            border: 0;
+            background-color: $inputColor;
+            font-size: $inputfSize;
+            padding: 7px;
+            font-weight: 400;
+        }
+    }
+}
