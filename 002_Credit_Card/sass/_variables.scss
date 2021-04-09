@@ -1,0 +1,10 @@
+$primaryColor: #FEFFDE;
+$secondaryColor:#37544f;
+$inputBorderColor:#49AE9D;
+$buttonColor:#1aa1a1;
+$buttonColorActive:#116969;
+
+%card{
+    background: linear-gradient(89.79deg, #37544F 0.17%, #1AA2A2 99.8%), #49AE9D;
+    border-radius: 12px;
+}

@@ -1,0 +1,157 @@
+@import 'reset';
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    height: 100vh;
+    background-color: $primaryColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .return {
+        width: 100vw;
+        padding: 20px 10px;
+
+        a {
+            text-decoration: none;
+            color: $secondaryColor;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    h1 {
+        color: $secondaryColor;
+        font-weight: 600;
+        font-size: 18px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .credit-card {
+        @extend %card;
+        max-width: 320px;
+        //margin: 10px auto;
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card-type {
+            width: 90%;
+            margin: 12px auto;
+
+            span {
+                display: flex; 
+                align-items: center;
+                font-size: 18px;
+                font-weight: 500;
+                color: $primaryColor;
+                i {
+                    font-size: 36px;
+                    padding-right: 8px;
+                }
+            }
+        }
+        .dynamic-card-content{
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+
+            .card-number{
+                width: 60%;
+            }
+            .card-expiry{
+                width: 40%;
+            }
+            .card-name{
+                width: 100%;
+            }
+            .card-text-group{
+                margin: 10px 0;
+                color: $primaryColor;
+                h2{
+                    padding-bottom: 5px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .credit-card-options {
+        display: flex;
+        width: 320px;
+        margin: auto;
+        margin-bottom: 15px;
+
+        p {
+            margin: 0 10px;
+            font-size: 24px;
+
+            i {
+                font-size: 30px;
+                color: $secondaryColor;
+            }
+        }
+
+    }
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        .card-number, .btn{
+            width: 55%;
+        }
+        .card-expiry, .card-cvv{
+            width: 35%;
+        }
+        .card-name{
+            width: 100%;
+        }
+        .btn{
+            align-self: center;
+            margin: auto;
+            border-radius: 12px;
+            background-color: $buttonColor;
+            font-weight: 500;
+            max-width: 250px;
+        }
+        .form-group{
+            margin: 5px 0;
+            label{
+                color: $secondaryColor;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:520px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        .return{
+            display: none;
+        }
+        .form{
+            width: 60%;
+        }
+    }
+}

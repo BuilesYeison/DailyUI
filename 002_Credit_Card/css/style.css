@@ -1,0 +1,285 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+main .credit-card {
+  background: linear-gradient(89.79deg, #37544F 0.17%, #1AA2A2 99.8%), #49AE9D;
+  border-radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: #FEFFDE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .return {
+  width: 100vw;
+  padding: 20px 10px;
+}
+main .return a {
+  text-decoration: none;
+  color: #37544f;
+  font-size: 16px;
+  font-weight: 300;
+}
+main h1 {
+  color: #37544f;
+  font-weight: 600;
+  font-size: 18px;
+  width: 90%;
+  margin: auto;
+}
+main .credit-card {
+  max-width: 320px;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .credit-card .card-type {
+  width: 90%;
+  margin: 12px auto;
+}
+main .credit-card .card-type span {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FEFFDE;
+}
+main .credit-card .card-type span i {
+  font-size: 36px;
+  padding-right: 8px;
+}
+main .credit-card .dynamic-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
+main .credit-card .dynamic-card-content .card-number {
+  width: 60%;
+}
+main .credit-card .dynamic-card-content .card-expiry {
+  width: 40%;
+}
+main .credit-card .dynamic-card-content .card-name {
+  width: 100%;
+}
+main .credit-card .dynamic-card-content .card-text-group {
+  margin: 10px 0;
+  color: #FEFFDE;
+}
+main .credit-card .dynamic-card-content .card-text-group h2 {
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+main .credit-card .dynamic-card-content .card-text-group p {
+  font-size: 14px;
+  font-weight: 400;
+}
+main .credit-card-options {
+  display: flex;
+  width: 320px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+main .credit-card-options p {
+  margin: 0 10px;
+  font-size: 24px;
+}
+main .credit-card-options p i {
+  font-size: 30px;
+  color: #37544f;
+}
+main .form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+main .form .card-number, main .form .btn {
+  width: 55%;
+}
+main .form .card-expiry, main .form .card-cvv {
+  width: 35%;
+}
+main .form .card-name {
+  width: 100%;
+}
+main .form .btn {
+  align-self: center;
+  margin: auto;
+  border-radius: 12px;
+  background-color: #1aa1a1;
+  font-weight: 500;
+  max-width: 250px;
+}
+main .form .form-group {
+  margin: 5px 0;
+}
+main .form .form-group label {
+  color: #37544f;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 520px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main .return {
+    display: none;
+  }
+  main .form {
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
