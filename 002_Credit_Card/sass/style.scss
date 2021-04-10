@@ -18,6 +18,46 @@ main {
     justify-content: center;
     align-items: center;
 
+    .modalize{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        background-blend-mode: soft-light;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        .modal-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 50%;
+            background-color: $primaryColor;
+            border-radius: 12px;
+            .modal-content{
+                h1{
+                    font-size: 42px;
+                    margin-bottom: 25px;
+                }
+                .modal-cta{
+                    padding: 5px;                    
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    color: rgb(126, 126, 126);
+                }
+                .modal-cta:hover{
+                    color: $secondaryColor;
+                }
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+
     .return {
         width: 100vw;
         padding: 20px 10px;
@@ -139,6 +179,9 @@ main {
                 color: $secondaryColor;
                 font-size: 12px;
             }
+            p{
+                font-size: 8.5px;
+            }
         }
     }
 }
@@ -152,6 +195,12 @@ main {
         }
         .form{
             width: 60%;
+        }
+        .modalize{
+            .modal-container{
+                width: 25vw;
+                height: 25vw;
+            }
         }
     }
 }

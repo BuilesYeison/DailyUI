@@ -21,27 +21,28 @@
         <div class="return"><a><i class='bx bx-left-arrow'></i> Back to payment methods</a></div>
         <h1>CARD DETAILS:</h1>
         <div class="credit-card">
-            <div class="card-type"><span><i class='bx bxl-mastercard' ></i> MasterCard</span></div>
+            <div class="card-type"><span class="cd-type"><i class='bx bx-credit-card-front'></i></span></div>
             <div class="dynamic-card-content">
                 <div class="card-text-group card-number">
                     <h2>Card number:</h2>
-                    <p class="number-info">######</p>
+                    <p class="number-info">___</p>
                 </div>
                 <div class="card-text-group card-expiry">
                     <h2>Expiry date:</h2>
-                    <p class="expiry-info">##/##</p>
+                    <p class="expiry-info">__/__</p>
                 </div>
                 <div class="card-text-group card-name">
                     <h2>Card holder's name:</h2>
-                    <p class="name-info">######</p>
+                    <p class="name-info">___</p>
                 </div>
-                
+
             </div>
         </div>
         <div class="form">
             <div class="input-field form-group card-number">
-                <label  for="card_number" class="form-label">Card number:</label>
-                <input type="text" id="card_number" name="card_number">
+                <label for="card_number" class="form-label">Card number:</label>
+                <input type="number" id="card_number" name="card_number">
+                <p class="advice"></p>
             </div>
             <div class="input-field form-group card-expiry">
                 <label for="card_expiry" class="form-label">Expiry date:</label>
@@ -56,6 +57,14 @@
                 <input type="password" id="card_cvv" name="card_cvv">
             </div>
             <a class="waves-effect waves-light btn">Proceed</a>
+        </div>
+        <div class="modalize">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <h1>Thank you for choosing us</h1>
+                    <a class="modal-cta">Ok!</a>
+                </div>
+            </div>
         </div>
     </main>
     <!-- Compiled and minified JavaScript -->

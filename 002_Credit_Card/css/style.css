@@ -157,6 +157,45 @@ main {
   justify-content: center;
   align-items: center;
 }
+main .modalize {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: soft-light;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+main .modalize .modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+  background-color: #FEFFDE;
+  border-radius: 12px;
+}
+main .modalize .modal-container .modal-content {
+  width: 80%;
+  margin: auto;
+}
+main .modalize .modal-container .modal-content h1 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+main .modalize .modal-container .modal-content .modal-cta {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #7e7e7e;
+}
+main .modalize .modal-container .modal-content .modal-cta:hover {
+  color: #37544f;
+}
 main .return {
   width: 100vw;
   padding: 20px 10px;
@@ -268,6 +307,9 @@ main .form .form-group label {
   color: #37544f;
   font-size: 12px;
 }
+main .form .form-group p {
+  font-size: 8.5px;
+}
 
 @media screen and (min-width: 520px) {
   main {
@@ -279,6 +321,10 @@ main .form .form-group label {
   }
   main .form {
     width: 60%;
+  }
+  main .modalize .modal-container {
+    width: 25vw;
+    height: 25vw;
   }
 }
 
