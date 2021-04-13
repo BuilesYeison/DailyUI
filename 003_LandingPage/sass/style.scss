@@ -1,1 +1,68 @@
 @import "reset";
+@import "variables";
+body{
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    header{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        h1{
+            @include title($secondaryColor);
+            padding-bottom: 65px;
+            //transition: all 0.1s;
+        }
+    }
+    main{
+        position: relative;
+        overflow: scroll;
+        width: 65%;
+        
+        .switch{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            i{
+                font-size: 18px;
+                color: black;
+            }
+        }
+        .main-info{
+            min-height: 90vh;
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .content{
+                width: 90%;
+                h1{
+                    @include title($primaryColor);
+                }
+                p{
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin: 20px 0 50px 0;
+                }
+                .input-field{
+                    input{
+                        width: 70%;
+                        margin-right:30px;
+                         
+                    }
+                    a{
+                        @include cta($ctaColor,$ctaHoverColor,$ctaActiveColor);
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}

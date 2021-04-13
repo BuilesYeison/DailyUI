@@ -135,4 +135,80 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+body header {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+body header h1 {
+  font-size: 64px;
+  font-weight: 600;
+  color: #FBFEFF;
+  padding-bottom: 65px;
+}
+body main {
+  position: relative;
+  overflow: scroll;
+  width: 65%;
+}
+body main .switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+body main .switch i {
+  font-size: 18px;
+  color: black;
+}
+body main .main-info {
+  min-height: 90vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main .main-info .content {
+  width: 90%;
+}
+body main .main-info .content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  color: #03080A;
+}
+body main .main-info .content p {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 20px 0 50px 0;
+}
+body main .main-info .content .input-field input {
+  width: 70%;
+  margin-right: 30px;
+}
+body main .main-info .content .input-field a {
+  height: 45px;
+  width: 150px;
+  background-color: #61A5C7;
+}
+body main .main-info .content .input-field a:hover {
+  background-color: #44768f;
+}
+body main .main-info .content .input-field a:active {
+  background-color: #25404e;
+}
+
 /*# sourceMappingURL=style.css.map */

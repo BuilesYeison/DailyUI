@@ -1,0 +1,25 @@
+$primaryColor:#03080A;
+$secondaryColor:#FBFEFF;
+$ctaColor:#61A5C7;
+$ctaHoverColor:#44768f;
+$ctaActiveColor:#25404e;
+
+@mixin title($color){
+    font-size: 64px;
+    font-weight: 600;
+    color: $color;
+}
+
+@mixin cta($color,$hoverColor,$activeColor){
+    
+    height: 45px;
+    width: 150px;
+    background-color: $color;
+    &:hover{
+        background-color: $hoverColor;
+    }
+    &:active{
+        background-color: $activeColor;
+    }
+}
+
