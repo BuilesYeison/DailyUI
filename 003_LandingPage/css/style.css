@@ -139,6 +139,10 @@ table {
   box-sizing: border-box;
 }
 
+.dark-mode {
+  color: #FBFEFF;
+}
+
 @media screen and (max-width: 885px) {
   body #header {
     display: none;
@@ -147,9 +151,8 @@ table {
   #main {
     left: 0;
     right: 0;
-    border: 1px solid black;
     margin: auto;
-    width: 95%;
+    width: 100%;
   }
   #main h1 {
     font-size: 3rem;
@@ -192,6 +195,7 @@ body main {
   right: 0;
   width: 65vw;
   overflow: hidden;
+  transition: 0.5s;
 }
 body main .switch {
   position: fixed;
