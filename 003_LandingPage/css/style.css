@@ -238,5 +238,28 @@ body main .about .about-content p {
   font-weight: 400;
   line-height: 1.5;
 }
+body main .tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100vh;
+}
+body main .tech .tech-content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  color: #03080A;
+}
+body main .tech .tech-content .grid {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-top: 50px;
+}
+body main .tech .tech-content .grid i {
+  font-size: 64px;
+}
 
 /*# sourceMappingURL=style.css.map */
