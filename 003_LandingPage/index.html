@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -22,13 +23,13 @@
     <main>
         <div class="switch">
             <label>
-                <input type="checkbox">
+                <input class="dark-mode-switch" type="checkbox">
                 <span class="lever"></span>
-                <i class='bx bxs-moon'></i>
+                <i class='bx-dark-mode bx bxs-moon'></i>
             </label>
         </div>
         <section class="main-info">
-            <div class="content">
+            <div data-aos="fade-up" data-aos-duration="3000" class="content">
                 <h1>Geeks will conquer the world</h1>
                 <p>Subscribe to our newsletter and be part of the new future</p>
                 <div class="input-field col">
@@ -37,12 +38,24 @@
                     <a class="btn cta"><i class='bx bxs-send'></i></a>
                 </div>
             </div>
-
+        </section>
+        <section class="about">
+            <div data-aos="fade-up" data-aos-duration="1500" class="about-content">
+                <h1>About Tweeter</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque felis et dignissim
+                    vehicula. Cras ut neque ac augue molestie pellentesque in et purus. Vestibulum sodales, ex tincidunt
+                    molestie hendrerit, nulla magna sollicitudin nunc, sit amet sagittis libero tellus vel diam.</p>
+                <img data-speed="2" class="about-img" src="img/Twitter_Flatline.svg" alt="">
+            </div>
         </section>
     </main>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="lib/index.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
