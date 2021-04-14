@@ -139,6 +139,25 @@ table {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 885px) {
+  body #header {
+    display: none;
+  }
+
+  #main {
+    left: 0;
+    right: 0;
+    border: 1px solid black;
+    margin: auto;
+    width: 95%;
+  }
+  #main h1 {
+    font-size: 3rem;
+  }
+  #main .about {
+    height: 150vh;
+  }
+}
 body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
@@ -163,6 +182,10 @@ body header h1 {
   font-weight: 600;
   color: #FBFEFF;
   padding-bottom: 65px;
+  width: fit-content;
+}
+body header img {
+  width: 25vw;
 }
 body main {
   position: absolute;
@@ -174,6 +197,7 @@ body main .switch {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 999;
 }
 body main .switch i {
   font-size: 18px;
@@ -218,7 +242,7 @@ body main .main-info .content .input-field a:active {
 body main .about {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   max-width: 100%;
   height: 100vh;
 }
@@ -245,6 +269,9 @@ body main .tech {
   max-width: 100%;
   height: 100vh;
 }
+body main .tech .tech-content {
+  width: 90%;
+}
 body main .tech .tech-content h1 {
   font-size: 64px;
   font-weight: 600;
@@ -256,7 +283,7 @@ body main .tech .tech-content .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 body main .tech .tech-content .grid i {
   font-size: 64px;

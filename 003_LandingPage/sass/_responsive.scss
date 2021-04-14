@@ -1,0 +1,20 @@
+@media screen and (max-width:885px){
+    body #header{
+        display: none;
+    }
+
+    #main{
+        left: 0;
+        right: 0;
+        border: 1px solid black;
+        margin: auto;
+        width: 95%;
+        h1{
+            font-size: 3rem;
+        }
+        .about{
+            height: 150vh;
+        }
+        
+    }
+}
