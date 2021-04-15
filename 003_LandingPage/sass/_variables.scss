@@ -10,10 +10,18 @@ $ctaActiveColor:#25404e;
     color: $color;
 }
 
+@mixin containerSettings($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    max-width: 100%;
+    height: 100vh;
+}
+
 @mixin cta($color,$hoverColor,$activeColor){
     
     height: 45px;
-    width: 150px;
+    width: 100px;
     background-color: $color;
     &:hover{
         background-color: $hoverColor;

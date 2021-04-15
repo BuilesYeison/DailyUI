@@ -5,41 +5,36 @@ const darkModeSwitch = document.querySelector(".dark-mode-switch");
 const darkModeIcon = document.querySelector(".bx-dark-mode");
 const emailInput = document.querySelector("#email");
 
-darkModeSwitch.addEventListener("input",evy=>{
+const changeColor = (primaryColor,secondaryColor)=>{
+    emailInput.style.color = primaryColor;
+    document.querySelector("#main").style.backgroundColor = secondaryColor;
+    document.querySelectorAll(".text").forEach(text=>text.style.color = primaryColor)
+}
+darkModeSwitch.addEventListener("input",evt=>{
     if(darkModeSwitch.checked){
-        darkModeIcon.classList.add("bxs-sun")
-        darkModeIcon.classList.remove("bxs-moon")
-        emailInput.style.color = "#FBFEFF"
-        document.querySelector("#main").style.backgroundColor = "#03080A"
-        document.querySelectorAll(".text").forEach(text=>{
-            text.style.color = "#FBFEFF"
-            console.log(text)
-        })
+        darkModeIcon.classList.add("bxs-sun");
+        darkModeIcon.classList.remove("bxs-moon");
+        changeColor("#FBFEFF","#03080A");
     }else{
-        darkModeIcon.classList.remove("bxs-sun")
-        darkModeIcon.classList.add("bxs-moon")
-        emailInput.style.color = "#03080A"
-        document.querySelector("#main").style.backgroundColor = "#FBFEFF"
-        document.querySelectorAll(".text").forEach(text=>{
-            text.style.color = "#03080A"
-            console.log(text)
-        })
+        darkModeIcon.classList.remove("bxs-sun");
+        darkModeIcon.classList.add("bxs-moon");
+        changeColor("#03080A","#FBFEFF");
     }
 })
 
 header.addEventListener("mousemove", evt => {
     document.querySelectorAll(".layer").forEach(element => {
-        const speed = element.getAttribute("data-speed")
-        const x = (window.innerWidth - evt.pageX * speed) / 100
-        const y = (window.innerHeight - evt.pageY * speed) / 100
+        const speed = element.getAttribute("data-speed");
+        const x = (window.innerWidth - evt.pageX * speed) / 100;
+        const y = (window.innerHeight - evt.pageY * speed) / 100;
 
-        element.style.transform = `translateX(${x}px) translateY(${y}px)`
+        element.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
 });
 
 about.addEventListener("mousemove", evt => {
-    const speed = aboutImg.getAttribute("data-speed")
-    const x = (window.innerWidth - evt.pageX * speed) / 100
-    const y = (window.innerHeight - evt.pageY * speed) / 100
+    const speed = aboutImg.getAttribute("data-speed");
+    const x = (window.innerWidth - evt.pageX * speed) / 100;
+    const y = (window.innerHeight - evt.pageY * speed) / 100;
 
-    aboutImg.style.transform = `translateX(${x}px) translateY(${y}px)`})
+    aboutImg.style.transform = `translateX(${x}px) translateY(${y}px)`});

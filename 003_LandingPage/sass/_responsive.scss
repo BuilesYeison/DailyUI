@@ -11,8 +11,34 @@
         h1{
             font-size: 3rem;
         }
+        .main-info{
+            .content{
+                .input-field{
+                    a{
+                        width: 70px;
+                    }
+                    input{
+
+                        width: 50%;
+                    }
+                }
+            }
+        }
         .about{
             height: 150vh;
+        }
+        .opinions{
+            
+            .slider{
+                width: 90%;
+                overflow:initial;
+                .slider-items{
+                    .card{
+                        flex-direction: column;
+                        
+                    }
+                }
+            }
         }
         
     }

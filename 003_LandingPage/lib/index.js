@@ -6,25 +6,24 @@ var about = document.querySelector(".about-content");
 var darkModeSwitch = document.querySelector(".dark-mode-switch");
 var darkModeIcon = document.querySelector(".bx-dark-mode");
 var emailInput = document.querySelector("#email");
-darkModeSwitch.addEventListener("input", function (evy) {
+
+var changeColor = function changeColor(primaryColor, secondaryColor) {
+  emailInput.style.color = primaryColor;
+  document.querySelector("#main").style.backgroundColor = secondaryColor;
+  document.querySelectorAll(".text").forEach(function (text) {
+    return text.style.color = primaryColor;
+  });
+};
+
+darkModeSwitch.addEventListener("input", function (evt) {
   if (darkModeSwitch.checked) {
     darkModeIcon.classList.add("bxs-sun");
     darkModeIcon.classList.remove("bxs-moon");
-    emailInput.style.color = "#FBFEFF";
-    document.querySelector("#main").style.backgroundColor = "#03080A";
-    document.querySelectorAll(".text").forEach(function (text) {
-      text.style.color = "#FBFEFF";
-      console.log(text);
-    });
+    changeColor("#FBFEFF", "#03080A");
   } else {
     darkModeIcon.classList.remove("bxs-sun");
     darkModeIcon.classList.add("bxs-moon");
-    emailInput.style.color = "#03080A";
-    document.querySelector("#main").style.backgroundColor = "#FBFEFF";
-    document.querySelectorAll(".text").forEach(function (text) {
-      text.style.color = "#03080A";
-      console.log(text);
-    });
+    changeColor("#03080A", "#FBFEFF");
   }
 });
 header.addEventListener("mousemove", function (evt) {
