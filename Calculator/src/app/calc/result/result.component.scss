@@ -1,0 +1,23 @@
+.result-container{
+    background-color: #115259;
+    width: 100%;
+    height: 30%;
+    position: relative;
+    .result-content{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 25px;
+        h3{
+            font-size: 2em;
+            text-align: right;
+            color: #FEFEFE;
+        }
+        input{
+            color: #9C9C9C;
+            background-color: transparent;
+            border: 0;
+            text-align: right;
+        }
+    }
+}
