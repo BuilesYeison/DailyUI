@@ -12,7 +12,6 @@ export class ResultComponent implements OnInit {
   operationArray:number[] = [];
   result:number = 0;
   @Input()hero:any;
-  @Output() flush:EventEmitter<any>=new EventEmitter();
   constructor() { }
   getResult(){
     if(this.operation.includes("+")){
@@ -22,6 +21,7 @@ export class ResultComponent implements OnInit {
       console.log(this.operationArray)
       
     }
+    console.log(this.hero)
   }
   calcProces(){
     
@@ -33,11 +33,6 @@ export class ResultComponent implements OnInit {
   ngOnChanges():void{
     if(this.hero.includes('c')){
       this.hero=""
-      this.flush.emit(true)
-    }else if(this.hero.includes('<<')){
-      this.hero.replace(this.hero.charAt(this.hero.indexOf("<<")-1),"");
-      this.hero.replace(this.hero.charAt(this.hero.indexOf("<<")),"");
-      this.flush.emit(false)
     }
   }
 

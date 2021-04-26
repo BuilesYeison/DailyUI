@@ -13,16 +13,13 @@ export class CalcComponent implements OnInit {
 
   }
   operation(i:any){
-    if(i!="c" || i!="<<"){
+    if(i!="c" && i!="<<"){
       this.sentence.push(i)
-    }else if(i==="c"){
+    }else if(i=="c"){
       this.sentence = []
     }else if(i==="<<"){
       this.sentence.pop()
     }
-  }
-  flush(bool:boolean){
-    if(bool){this.sentence=[]}else if(!bool){this.sentence.pop();this.sentence.pop()}
   }
 
   ngOnInit(): void {
