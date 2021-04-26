@@ -8,20 +8,13 @@ const ops = ["+","-","*","/"]
   styleUrls: ['./result.component.scss']
 })
 export class ResultComponent implements OnInit {
-  operation:string = "";
   operationArray:number[] = [];
   result:number = 0;
   @Input()hero:any;
+  @Input()res:any;
   constructor() { }
   getResult(){
-    if(this.operation.includes("+")){
-      for(let item of this.operation.split("+")){
-        this.operationArray.push(parseFloat(item))
-      }
-      console.log(this.operationArray)
-      
-    }
-    console.log(this.hero)
+
   }
   calcProces(){
     
@@ -31,9 +24,7 @@ export class ResultComponent implements OnInit {
     
   }
   ngOnChanges():void{
-    if(this.hero.includes('c')){
-      this.hero=""
-    }
+    
   }
 
 }

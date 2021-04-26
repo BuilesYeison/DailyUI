@@ -1,6 +1,6 @@
 <div class="result-container">
   <div class="result-content">
-    <input [(ngModel)]="operation" (input)="calcProces()" type="text" name="calculation" [value]="this.hero">
-    <h3 class="result">624.000.000</h3>
+    <input (input)="calcProces()" type="text" name="calculation" [value]="this.hero">
+    <h3 class="result" >{{this.res}}</h3>
   </div>
 </div>

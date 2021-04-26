@@ -1,7 +1,7 @@
 <div class="calculadora">
-    <app-result [hero]="this.sentence.join('')"></app-result>
+    <app-result [res]="this.result" [hero]="this.sentence.join('')"></app-result>
     <div class="buttons">
         <a (click)="operation(i)" *ngFor="let i of buttons" ><span>{{i}}</span></a>
-        <a class="cta">=</a>
+        <a (click)="equalTo()" class="cta">=</a>
     </div>
 </div>
