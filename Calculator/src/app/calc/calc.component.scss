@@ -14,6 +14,30 @@
         a{
             text-decoration: none;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            span{
+                font-size: 1.8em;
+            }
+        }
+        a:hover{
+            background-color: #3e737c;
+            transform: scale(1.1);
+        }
+        .cta{
+            font-size: 1.8em;
+            border-radius: 100%;
+            background-color: #34cea2;
+            width: 80%;
+            height: 80%;
+            align-self: center;
+            justify-self: center;
+        }
+        .cta:hover{
+            background-color: #289e7d;
         }
     }
 }

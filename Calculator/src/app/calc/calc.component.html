@@ -1,6 +1,7 @@
 <div class="calculadora">
-    <app-result></app-result>
-    <div class="buttons" >
-        <a *ngFor="let i of buttons" href="">{{i}}</a>
+    <app-result (flush)="flush($event)" [hero]="this.sentence.join('')"></app-result>
+    <div class="buttons">
+        <a (click)="operation(i)" *ngFor="let i of buttons" ><span>{{i}}</span></a>
+        <a class="cta">=</a>
     </div>
 </div>
