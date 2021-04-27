@@ -1,27 +1,12 @@
-# Calculator
+# Daily UI #4 : Calculator
+This is another [DailyUi Challenge](https://www.dailyui.co/) task. I implemented some of technologies that ive been learning: Angular, sass, flexbox, responsive, grid layout, ECMAScrip 6, TypeScript and Figma.
+I implemented these services too: [Boxicons](https://boxicons.com/), [Google Fonts](https://fonts.google.com/).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+This is a basic calculator can Add, subtract, multiply and divide but the logic needs more additions, you can see how it works in this [Youtube Video](https://www.youtube.com/watch?v=k7mdKPWOGyo&list=PL_soeKKkJIyNXGt9vs2UGbfqWdKGLEgnS). The web page is totally responsive.
 
-## Development server
+## Deploy
+Coming soon
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## About me
+Follow me and my work in [Twitter](https://twitter.com/BuilesYeison) and [LinkedIn](https://www.linkedin.com/in/builesyeison/)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
